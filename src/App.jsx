@@ -43,7 +43,7 @@ function App() {
     
     // Get model URL from query parameter or use default
     const params = new URLSearchParams(window.location.search);
-    const modelUrl = params.get('model') || `${import.meta.env.BASE_URL}model.glb`; // Put your model in public folder
+    const modelUrl = params.get('model') || `${import.meta.env.BASE_URL}/model.glb`; // Put your model in public folder
 
     loader.load(
       modelUrl,
