@@ -91,7 +91,7 @@ function App() {
     };
   }, []);
 
-  return <div ref={mountRef} />;
+  return <div ref={mountRef} className="bg-slate-500"/>;
 }
 
 export default App;
