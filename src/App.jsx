@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     // Scene setup
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xf0f0f0);
+    scene.background = null;
 
     // Camera
     const camera = new THREE.PerspectiveCamera(
@@ -91,7 +91,16 @@ function App() {
     };
   }, []);
 
-  return <div ref={mountRef} className="bg-slate-500"/>;
+  return (
+    <div className="relative w-full h-screen bg-neutral-600">
+      <div ref={mountRef} className="absolute inset-0" />
+      <div className="absolute top-4 left-4 z-10">
+        <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg text-white">
+          <p className="text-sm font-medium">3D Model Viewer</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
